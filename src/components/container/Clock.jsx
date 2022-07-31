@@ -18,11 +18,9 @@ const Clock = (props) => {
 
     const intervalID = setInterval(() => {
       setValor((prevState) => {
-        let edad = prevState.edad + 1;
         return {
           ...prevState,
-          fecha: time,
-          edad,
+          fecha: new Date(),
         };
       });
     }, 1000);
@@ -40,10 +38,7 @@ const Clock = (props) => {
         Hora Actual:
         {valor.fecha.toLocaleTimeString()}
       </h2>
-      <h3>
-        {valor.nombre} {valor.apellidos}
-      </h3>
-      <h1>Edad: {valor.edad}</h1>
+      
     </div>
   );
 };
